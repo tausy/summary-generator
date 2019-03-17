@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="293.0" prefWidth="509.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guestpage.GuestController">
+<AnchorPane prefHeight="293.0" prefWidth="509.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guestpage.GuestController">
    <children>
       <Label layoutX="131.0" layoutY="83.0" text="user name" />
       <Label layoutX="131.0" layoutY="114.0" text="first name" />
