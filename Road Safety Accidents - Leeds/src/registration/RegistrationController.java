@@ -1,20 +1,15 @@
 package registration;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import dao.ConnectionDAO;
-import dao.MapDao;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import landingpage.LoadApp;
-import login.LoginManager;
-import map.Browser;
 import masterpage.MasterScreenController;
 import validation.RequiredField;
 
@@ -102,7 +97,9 @@ public class RegistrationController {
     public void showMap() {
         try {
             LoadApp.stage.setHeight(700.0);
-            LoadApp.stage.setWidth(700.0);
+            LoadApp.stage.setWidth(500.0);
+            LoadApp.stage.setResizable(false);
+            LoadApp.stage.centerOnScreen();
 
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/masterpage/masterscreen.fxml"));

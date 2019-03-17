@@ -134,49 +134,49 @@ public class MapController implements Initializable {
 		if (!cycle.equals("")) {
 			baseQuery = baseQuery.substring(baseQuery.lastIndexOf(' ') + 1).equals("where")
 					? baseQuery + " lower(TypeOfVehicle) = 'cycle'"
-					: baseQuery + " AND " + "lower(TypeOfVehicle) = 'cycle'";
+					: baseQuery + " OR " + "lower(TypeOfVehicle) = 'cycle'";
 		}
 
 		if (!motorcycle.equals("")) {
 			baseQuery = baseQuery.substring(baseQuery.lastIndexOf(' ') + 1).equals("where")
 					? baseQuery + " lower(TypeOfVehicle) like '%motorcycle%'"
-					: baseQuery + " AND lower(TypeOfVehicle) like '%motorcycle%'";
+					: baseQuery + " OR lower(TypeOfVehicle) like '%motorcycle%'";
 		}
 
 		if (!car.equals("")) {
 			baseQuery = baseQuery.substring(baseQuery.lastIndexOf(' ') + 1).equals("where")
 					? baseQuery + " lower(TypeOfVehicle) like '%car%'"
-					: baseQuery + " AND lower(TypeOfVehicle) like '%car%'";
+					: baseQuery + " OR lower(TypeOfVehicle) like '%car%'";
 		}
 
 		if (!van.equals("")) {
 			baseQuery = baseQuery.substring(baseQuery.lastIndexOf(' ') + 1).equals("where")
 					? baseQuery + " lower(TypeOfVehicle) like '%van%'"
-					: baseQuery + " AND lower(TypeOfVehicle) like '%van%'";
+					: baseQuery + " OR lower(TypeOfVehicle) like '%van%'";
 		}
 
 		if (!bus.equals("")) {
 			baseQuery = baseQuery.substring(baseQuery.lastIndexOf(' ') + 1).equals("where")
 					? baseQuery + " lower(TypeOfVehicle) like '%bus%'"
-					: baseQuery + " AND lower(TypeOfVehicle) like '%bus%'";
+					: baseQuery + " OR lower(TypeOfVehicle) like '%bus%'";
 		}
 
 		if (!lorry.equals("")) {
 			baseQuery = baseQuery.substring(baseQuery.lastIndexOf(' ') + 1).equals("where")
 					? baseQuery + " lower(TypeOfVehicle) like '%lorry%'"
-					: baseQuery + " AND lower(TypeOfVehicle) like '%lorry%'";
+					: baseQuery + " OR lower(TypeOfVehicle) like '%lorry%'";
 		}
 
 		if (!other.equals("")) {
 			baseQuery = baseQuery.substring(baseQuery.lastIndexOf(' ') + 1).equals("where")
 					? baseQuery + " lower(TypeOfVehicle) like '%other%'"
-					: baseQuery + " AND lower(TypeOfVehicle) like '%other%'";
+					: baseQuery + " OR lower(TypeOfVehicle) like '%other%'";
 		}
 
 		if (!claim.equals("")) {
 			baseQuery = baseQuery.substring(baseQuery.lastIndexOf(' ') + 1).equals("where")
 					? baseQuery + " lower(TypeOfVehicle) like '%claim%'"
-					: baseQuery + " AND lower(TypeOfVehicle) like '%claim%'";
+					: baseQuery + " OR lower(TypeOfVehicle) like '%claim%'";
 		}
 
 		if (speed != null) {

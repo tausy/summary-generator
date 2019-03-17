@@ -48,6 +48,7 @@ public class DashboardController  implements Initializable {
     	final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
         chart4.setTitle("Yearly Casulties");
+        
         xAxis.setLabel("Year");
         yAxis.setLabel("Casualty");
 
@@ -195,7 +196,7 @@ public class DashboardController  implements Initializable {
 		
 		// populate sex combo box
 					rs = MapDao.getAllColumns("select year, count(casualtySeverity) from accidentinfo where casualtySeverity = 'Fatal' group by year, casualtySeverity");
-					seriousCasualties.setName("Fatal");
+					fatalCasualties.setName("Fatal");
 					while (rs.next()) {
 						fatalCasualties.getData().add(new XYChart.Data<String, Number>(rs.getString(1), Integer.parseInt(rs.getString(2))));
 					}

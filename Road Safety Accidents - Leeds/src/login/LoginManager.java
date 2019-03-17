@@ -4,12 +4,10 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import dao.MapDao;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import landingpage.LoadApp;
 import map.Browser;
 import masterpage.MasterScreenController;
@@ -59,6 +57,8 @@ public class LoginManager {
     try {
       LoadApp.stage.setHeight(700.0);
       LoadApp.stage.setWidth(700.0);
+      LoadApp.stage.setResizable(false);
+      LoadApp.stage.centerOnScreen();
 
       FXMLLoader loader = new FXMLLoader(
               getClass().getResource("/masterpage/masterscreen.fxml"));
@@ -75,6 +75,8 @@ public class LoginManager {
     try {
       LoadApp.stage.setHeight(400.0);
       LoadApp.stage.setWidth(500.0);
+      LoadApp.stage.setResizable(false);
+      LoadApp.stage.centerOnScreen();
 
       FXMLLoader loader = new FXMLLoader(
               getClass().getResource("/guestpage/guestpage.fxml")

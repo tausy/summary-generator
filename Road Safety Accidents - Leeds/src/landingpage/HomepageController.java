@@ -19,7 +19,7 @@ public class HomepageController {
     @FXML
     public void exit()
     {
-
+    	System.exit(0);
     }
 
     @FXML
@@ -27,6 +27,8 @@ public class HomepageController {
     {
         LoadApp.stage.setHeight(250.0);
         LoadApp.stage.setWidth(360.0);
+        LoadApp.stage.setResizable(false);
+        LoadApp.stage.centerOnScreen();
 
         LoginManager loginManager = new LoginManager(LoadApp.scene);
         loginManager.showLoginScreen();

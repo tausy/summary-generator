@@ -23,7 +23,7 @@ public class LoadApp extends Application {
 
         try {
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("Untitled.fxml")
+                    getClass().getResource("homepage.fxml")
             );
             scene.setRoot((Parent) loader.load());
         } catch (IOException ex) {
@@ -33,5 +33,7 @@ public class LoadApp extends Application {
 
         stage.show();
         LoadApp.stage=stage;
+        stage.setResizable(false);
+        stage.centerOnScreen();
     }
 }
