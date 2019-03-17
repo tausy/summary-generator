@@ -15,6 +15,7 @@ import javafx.scene.layout.VBox;
 import landingpage.LoadApp;
 import login.LoginManager;
 import map.Browser;
+import masterpage.MasterScreenController;
 import validation.RequiredField;
 
 public class RegistrationController {
@@ -84,7 +85,7 @@ public class RegistrationController {
                 //preparedStmt.execute();
                 if(preparedStmt.executeUpdate()>0)
                 {
-                    loadMap();
+                    showMap();
                 }
                 conn.close();
 
@@ -97,24 +98,23 @@ public class RegistrationController {
         }
     }
 
-    private void loadMap() throws IOException
-    {
-        LoadApp.stage.setHeight(700.0);
-        LoadApp.stage.setWidth(700.0);
 
-        LoginManager.browser = new Browser(MapDao.getAllLocations());
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/resources/map.fxml"));
-        AnchorPane anchorPane=(AnchorPane)loader.load();
-        VBox vBox=(VBox) anchorPane.lookup("#mapBox");
+    public void showMap() {
+        try {
+            LoadApp.stage.setHeight(700.0);
+            LoadApp.stage.setWidth(700.0);
 
-        //  vBox.setPadding(new Insets(3));
-        vBox.getChildren().addAll(LoginManager.browser);
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/masterpage/masterscreen.fxml"));
+            AnchorPane anchorPane = (AnchorPane) loader.load();
 
-        // scene = new Scene(anchorPane, 750, 600, Color.web("#666970"));
-        LoadApp.scene.setRoot(anchorPane);
+            // scene = new Scene(anchorPane, 750, 600, Color.web("#666970"));
+            LoadApp.scene.setRoot(anchorPane);
+            new MasterScreenController().loadMap();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-
     private boolean validateAllInputs()
     {
         boolean allGood=false;

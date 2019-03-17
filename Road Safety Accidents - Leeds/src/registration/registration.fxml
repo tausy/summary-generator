@@ -8,7 +8,7 @@
 
 <?import validation.RequiredField?>
 <?import validation.ErrorLabel?>
-<AnchorPane prefHeight="505.0" prefWidth="600.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registration.RegistrationController">
+<AnchorPane prefHeight="505.0" prefWidth="600.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registration.RegistrationController">
     <children>
         <Label layoutX="121.0" layoutY="85.0" text="*First Name" />
         <Label layoutX="125.0" layoutY="116.0" text="*Sur Name" />

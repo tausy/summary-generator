@@ -12,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import landingpage.LoadApp;
 import map.Browser;
+import masterpage.MasterScreenController;
 
 /** Manages control flow for logins */
 public class LoginManager {
@@ -53,29 +54,23 @@ public class LoginManager {
     }
   }
 
+
   public void showMap() {
     try {
       LoadApp.stage.setHeight(700.0);
       LoadApp.stage.setWidth(700.0);
 
-      browser = new Browser(MapDao.getAllLocations());
       FXMLLoader loader = new FXMLLoader(
-              getClass().getResource("/resources/map.fxml"));
+              getClass().getResource("/masterpage/masterscreen.fxml"));
       AnchorPane anchorPane = (AnchorPane) loader.load();
-      VBox vBox = (VBox) anchorPane.lookup("#mapBox");
-
-      //  vBox.setPadding(new Insets(3));
-      vBox.getChildren().addAll(browser);
 
       // scene = new Scene(anchorPane, 750, 600, Color.web("#666970"));
       scene.setRoot(anchorPane);
-
+      new MasterScreenController().loadMap();
     } catch (Exception e) {
       e.printStackTrace();
     }
   }
-
-
   public void showGuest() {
     try {
       LoadApp.stage.setHeight(400.0);
