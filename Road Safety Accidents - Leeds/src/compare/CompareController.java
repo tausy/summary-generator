@@ -93,6 +93,7 @@ public class CompareController implements Initializable {
 		}
 
 		scatterChart.getData().add(accidentsSeries);
+		scatterChart.setAnimated(false);
 
 	}
 }
