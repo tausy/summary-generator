@@ -1,0 +1,85 @@
+package map;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.concurrent.Worker;
+import javafx.geometry.HPos;
+import javafx.geometry.VPos;
+import javafx.scene.layout.Region;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+import netscape.javascript.JSObject;
+
+
+public class Browser extends Region {
+
+    private WebView browser = new WebView();
+    WebEngine webEngine = browser.getEngine();
+
+
+  public  Browser(String locations) {
+
+
+        webEngine.setJavaScriptEnabled(true);
+
+        // A Worker load the page
+        getChildren().add(browser);
+
+        Worker<Void> worker = webEngine.getLoadWorker();
+
+        // Listening to the status of worker
+        worker.stateProperty().addListener(new ChangeListener<Worker.State>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Worker.State> observable, //
+                                Worker.State oldValue, Worker.State newValue) {
+
+                // When load successed.
+                if (newValue == Worker.State.SUCCEEDED) {
+
+                    try{
+                        // Get window object of page.
+                        JSObject jsobj = (JSObject) webEngine.executeScript("window");
+
+                        // Set member for 'window' object.
+                        // In Javascript access: window.myJavaMember....
+                        jsobj.setMember("java", new Bridge());
+
+
+                        System.out.println(locations);
+
+                        browser.getEngine().executeScript("initMap()");
+
+                        String script = "drawMap("+locations+")";
+
+
+                        browser.getEngine().executeScript(script);
+     }catch (Exception e){
+                        System.out.println(e);
+                    }
+                }
+            }
+        });
+        //noinspection ConstantConditions
+        webEngine.load(ClassLoader.getSystemClassLoader().getResource("resources/google.html").toExternalForm());
+webEngine.reload();
+
+    }
+
+    @Override
+    protected void layoutChildren() {
+        double w = getWidth();
+        double h = getHeight();
+        layoutInArea(browser, 0, 0, w, h, 0, HPos.CENTER, VPos.TOP);
+    }
+
+    @Override
+    protected double computePrefWidth(double height) {
+        return 750;
+    }
+
+    @Override
+    protected double computePrefHeight(double width) {
+        return 500;
+    }
+}
