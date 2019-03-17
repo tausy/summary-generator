@@ -23,7 +23,7 @@
           <NumberAxis side="LEFT" tickLabelFill="WHITE" />
         </yAxis>
       </BarChart>
-      <BarChart fx:id="chart3" layoutX="363.0" layoutY="5.0" prefHeight="275.0" prefWidth="360.0">
+      <BarChart fx:id="chart3" layoutX="363.0" layoutY="5.0" prefHeight="275.0" prefWidth="350.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" />
         </xAxis>
