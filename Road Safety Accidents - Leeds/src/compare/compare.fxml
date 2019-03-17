@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compare.CompareController">
+   <children>
+      <Button  onAction="#compareAccidents" layoutX="340.0" layoutY="61.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="compare" />
+      <ComboBox fx:id="yearBox2" layoutX="23.0" layoutY="22.0" prefWidth="150.0" promptText="year" />
+      <ComboBox fx:id="monthBox1" layoutX="183.0" layoutY="22.0" prefWidth="150.0" promptText="month" />
+      <ComboBox fx:id="yearBox1" layoutX="23.0" layoutY="61.0" prefWidth="150.0" promptText="year" />
+      <ComboBox fx:id="monthBox2" layoutX="183.0" layoutY="61.0" prefWidth="150.0" promptText="month" />
+      <ComboBox fx:id="weatherBox" layoutX="340.0" layoutY="22.0" prefWidth="150.0" promptText="weather" />
+      <ScatterChart fx:id="scatterChart" layoutX="23.0" layoutY="97.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </ScatterChart>
+   </children>
+</AnchorPane>
