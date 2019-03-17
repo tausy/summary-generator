@@ -8,6 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import validation.ErrorLabel?>
 
+<?import validation.RequiredField?>
 <AnchorPane prefHeight="250.0" prefWidth="360.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
   <children>
                 <TextField fx:id="user" layoutX="81.0" layoutY="45.0" prefHeight="26.0" prefWidth="171.0" />
@@ -17,25 +18,27 @@
                 <Button fx:id="loginButton" alignment="CENTER" defaultButton="true" layoutX="243.0" layoutY="124.0" mnemonicParsing="false" style="-fx-background-color: #4fb3bf;" text="Login" />
       <PasswordField fx:id="password" layoutX="82.0" layoutY="81.0" />
 
-      <fx:define>
-          <RequiredField fx:id="rqdUsername">
-              <srcControl>
-                  <fx:reference source="user" />
-              </srcControl>
-          </RequiredField>
-          <RequiredField fx:id="rqdLoginPass">
-              <srcControl>
-                  <fx:reference source="password" />
-              </srcControl>
-          </RequiredField>
-      </fx:define>
-      <ErrorLabel layoutX="80.0" layoutY="180.0" message="Invalid credentials please try again!!" />
-      <Label layoutX="71.0" layoutY="10.0" text="Leeds Accident Portal">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
               </children>
-
-
+    <fx:define>
+        <RequiredField fx:id="rqdUsername" >
+            <srcControl>
+                <fx:reference source="user"></fx:reference>
+            </srcControl>
+        </RequiredField>
+        <RequiredField fx:id="rqdLoginPass" >
+            <srcControl>
+                <fx:reference source="password"></fx:reference>
+            </srcControl>
+        </RequiredField>
+    </fx:define>
+    <ErrorLabel message="Invalid credentials please try again!!" layoutX="80.0" layoutY="180.0">
+        <validator>
+            <fx:reference source="rqdUsername"></fx:reference>
+        </validator>
+    </ErrorLabel>
+    <ErrorLabel message="Invalid credentials please try again!!" layoutX="80.0" layoutY="180.0">
+        <validator>
+            <fx:reference source="rqdLoginPass"></fx:reference>
+        </validator>
+    </ErrorLabel>
 </AnchorPane>
