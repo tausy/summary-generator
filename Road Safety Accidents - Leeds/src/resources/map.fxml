@@ -10,16 +10,16 @@
 <AnchorPane prefHeight="800.0" prefWidth="800" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="map.MapController">
     <children>
         <TextField layoutX="14.0" layoutY="14.0" />
-        <Button fx:id="search" layoutX="542.0" layoutY="82.0" mnemonicParsing="false" onAction="#search" text="search" />
+        <Button fx:id="search" layoutX="542.0" layoutY="82.0" mnemonicParsing="false" onAction="#search" style="-fx-background-color: #4fb3bf;" text="search" />
         <VBox fx:id="mapBox" layoutX="14.0" layoutY="121.0" prefHeight="600.0" prefWidth="675.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="121.0" />
         <CheckBox fx:id="pedCheckBox" layoutX="307.0" layoutY="52.0" mnemonicParsing="false" text="Pedestrian" />
-        <ComboBox fx:id="yearCombo" layoutX="195.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" promptText="Show All years" />
-        <ComboBox fx:id="speedCombo" layoutX="14.0" layoutY="48.0" prefHeight="26.0" prefWidth="130.0" promptText="Speed Limit" />
-        <ComboBox fx:id="ageCombo" layoutX="345.0" layoutY="14.0" prefWidth="150.0" promptText="Age Of Causality" />
-        <ComboBox fx:id="sexCombo" layoutX="498.0" layoutY="14.0" prefWidth="150.0" promptText="Sex Of Causality" />
-        <ComboBox fx:id="weatherCombo" layoutX="150.0" layoutY="48.0" prefWidth="150.0" promptText="Weather Conditions" />
+        <ComboBox fx:id="yearCombo" layoutX="195.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" promptText="Show All years" style="-fx-background-color: #4fb3bf;" />
+        <ComboBox fx:id="speedCombo" layoutX="14.0" layoutY="48.0" prefHeight="26.0" prefWidth="130.0" promptText="Speed Limit" style="-fx-background-color: #4fb3bf;" />
+        <ComboBox fx:id="ageCombo" layoutX="346.0" layoutY="14.0" prefWidth="150.0" promptText="Age Of Causality" style="-fx-background-color: #4fb3bf;" />
+        <ComboBox fx:id="sexCombo" layoutX="498.0" layoutY="14.0" prefWidth="150.0" promptText="Sex Of Causality" style="-fx-background-color: #4fb3bf;" />
+        <ComboBox fx:id="weatherCombo" layoutX="150.0" layoutY="48.0" prefWidth="150.0" promptText="Weather Conditions" style="-fx-background-color: #4fb3bf;" />
         <CheckBox fx:id="cycleChkBox" layoutX="401.0" layoutY="52.0" mnemonicParsing="false" text="Bicycle" />
-        <CheckBox fx:id="motorcycleChkBox" layoutX="472.0" layoutY="52.0" mnemonicParsing="false" text="Motorcycle" />
+        <CheckBox fx:id="motorcycleChkBox" layoutX="472.0" layoutY="52.0" mnemonicParsing="false" style="-fx-region-background: blue;" text="Motorcycle" />
         <CheckBox fx:id="carChkBox" layoutX="573.0" layoutY="52.0" mnemonicParsing="false" text="Car" />
         <CheckBox fx:id="vanChkBox" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" text="Van" />
         <CheckBox fx:id="busChkBox" layoutX="64.0" layoutY="86.0" mnemonicParsing="false" text="Bus Coach " />
