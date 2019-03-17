@@ -10,12 +10,12 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compare.CompareController">
    <children>
       <Button  onAction="#compareAccidents" layoutX="340.0" layoutY="61.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="compare" />
-      <ComboBox fx:id="yearBox2" layoutX="23.0" layoutY="22.0" prefWidth="150.0" promptText="year" />
+      <ComboBox fx:id="yearBox1" layoutX="23.0" layoutY="22.0" prefWidth="150.0" promptText="year" />
       <ComboBox fx:id="monthBox1" layoutX="183.0" layoutY="22.0" prefWidth="150.0" promptText="month" />
-      <ComboBox fx:id="yearBox1" layoutX="23.0" layoutY="61.0" prefWidth="150.0" promptText="year" />
+      <ComboBox fx:id="yearBox2" layoutX="23.0" layoutY="61.0" prefWidth="150.0" promptText="year" />
       <ComboBox fx:id="monthBox2" layoutX="183.0" layoutY="61.0" prefWidth="150.0" promptText="month" />
       <ComboBox fx:id="weatherBox" layoutX="340.0" layoutY="22.0" prefWidth="150.0" promptText="weather" />
-      <ScatterChart fx:id="scatterChart" layoutX="23.0" layoutY="97.0">
+      <ScatterChart fx:id="scatterChart" layoutX="25.0" layoutY="100.0" prefWidth="700" prefHeight="500">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
