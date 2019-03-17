@@ -5,17 +5,18 @@
 <?import javafx.scene.chart.ScatterChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compare.CompareController">
    <children>
-      <Button  onAction="#compareAccidents" layoutX="340.0" layoutY="61.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="compare" />
-      <ComboBox fx:id="yearBox1" layoutX="23.0" layoutY="22.0" prefWidth="150.0" promptText="year" />
-      <ComboBox fx:id="monthBox1" layoutX="183.0" layoutY="22.0" prefWidth="150.0" promptText="month" />
-      <ComboBox fx:id="yearBox2" layoutX="23.0" layoutY="61.0" prefWidth="150.0" promptText="year" />
-      <ComboBox fx:id="monthBox2" layoutX="183.0" layoutY="61.0" prefWidth="150.0" promptText="month" />
-      <ComboBox fx:id="weatherBox" layoutX="340.0" layoutY="22.0" prefWidth="150.0" promptText="weather" />
-      <ScatterChart fx:id="scatterChart" layoutX="25.0" layoutY="100.0" prefWidth="700" prefHeight="500">
+      <Button layoutX="535.0" style="-fx-background-color: #4fb3bf;" layoutY="44.0" mnemonicParsing="false" onAction="#compareAccidents" prefHeight="26.0" prefWidth="117.0" text="compare" />
+      <ComboBox fx:id="yearBox1" style="-fx-background-color: #4fb3bf;" layoutX="64.0" layoutY="22.0" prefHeight="26.0" prefWidth="127.0" promptText="year" />
+      <ComboBox fx:id="monthBox1" style="-fx-background-color: #4fb3bf;" layoutX="207.0" layoutY="22.0" prefHeight="26.0" prefWidth="117.0" promptText="month" />
+      <ComboBox fx:id="yearBox2" style="-fx-background-color: #4fb3bf;" layoutX="65.0" layoutY="63.0" prefHeight="26.0" prefWidth="127.0" promptText="year" />
+      <ComboBox fx:id="monthBox2" style="-fx-background-color: #4fb3bf;" layoutX="207.0" layoutY="63.0" prefHeight="26.0" prefWidth="117.0" promptText="month" />
+      <ComboBox fx:id="weatherBox" style="-fx-background-color: #4fb3bf;" layoutX="340.0" layoutY="44.0" prefWidth="150.0" promptText="weather" />
+      <ScatterChart fx:id="scatterChart" layoutX="7.0" layoutY="110.0" prefHeight="490.0" prefWidth="672.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
@@ -23,5 +24,7 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </ScatterChart>
+      <Label layoutX="22.0" layoutY="27.0" text="From" />
+      <Label layoutX="20.0" layoutY="66.0" text="To" />
    </children>
 </AnchorPane>

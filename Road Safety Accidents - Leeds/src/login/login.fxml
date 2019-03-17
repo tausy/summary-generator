@@ -12,7 +12,7 @@
 
 <?import validation.RequiredField?>
 <?import validation.ErrorLabel?>
-<StackPane prefHeight="150.0" prefWidth="360.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+<StackPane prefHeight="250.0" prefWidth="360.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
   <children>
     <StackPane>
       <children>
@@ -36,8 +36,8 @@
             </GridPane>
             <StackPane prefHeight="0.0" prefWidth="273.0">
               <children>
-                <Button fx:id="guest" mnemonicParsing="false" text="continue as guest" />
-                <Button fx:id="loginButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" text="Login" StackPane.alignment="CENTER_RIGHT" />
+                <Button fx:id="guest" mnemonicParsing="false" style="-fx-background-color: #4fb3bf;" text="continue as guest" />
+                <Button fx:id="loginButton" style="-fx-background-color: #4fb3bf;" alignment="CENTER" defaultButton="true" mnemonicParsing="false" text="Login" StackPane.alignment="CENTER_RIGHT" />
               </children>
             </StackPane>
           </children>
