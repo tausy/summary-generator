@@ -44,11 +44,11 @@ public class MasterScreenController {
 
     }
     @FXML
-    public void loadPredict()
+    public void loadDashboard()
     {
         try{
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/predict/predict.fxml"));
+                    getClass().getResource("/dashboard/dashboard.fxml"));
             AnchorPane anchorPane=(AnchorPane)loader.load();
             //  vBox.setPadding(new Insets(3));
             BorderPane borderPane=(BorderPane)LoadApp.scene.lookup("#borderPane");
