@@ -16,7 +16,7 @@
             <Font name="System Bold" size="15.0" />
          </font></Button>
       <BorderPane id="borderPane" layoutX="2.0" layoutY="49.0" prefHeight="568.0" prefWidth="800.0"  />
-      <Button layoutX="467.0" layoutY="1.0" mnemonicParsing="false" onAction="#loadDashboard" prefHeight="48.0" prefWidth="251.0" style="-fx-background-color: #4fb3bf; -fx-background-radius: 0;" text="DASHBOARD">
+      <Button layoutX="467.0" layoutY="1.0" mnemonicParsing="false" onAction="#loadDashboard" prefHeight="48.0" prefWidth="251.0" style="-fx-background-color: #4fb3bf; -fx-background-radius: 0; -fx-border-color:#00838f; -fx-border-width: 1; -fx-border-style: solid;" text="DASHBOARD">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
