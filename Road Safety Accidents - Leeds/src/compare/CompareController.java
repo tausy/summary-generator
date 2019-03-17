@@ -17,7 +17,7 @@ public class CompareController implements Initializable {
     @FXML
     private ScatterChart<CategoryAxis,Number> scatterChart;
     @FXML
-    private ComboBox<String> weatherCombo;
+    private ComboBox<String> weatherBox;
     @FXML
     private ComboBox<String> monthBox1;
     @FXML
@@ -40,8 +40,8 @@ public class CompareController implements Initializable {
 
             rs = MapDao.getAllColumns("Select distinct weatherConditions from accidentinfo");
             while (rs.next())
-                weatherCombo.getItems().add(rs.getString(1));
-            weatherCombo.getItems().add("All");
+                weatherBox.getItems().add(rs.getString(1));
+            weatherBox.getItems().add("All");
         }catch (Exception e)
         {
 
