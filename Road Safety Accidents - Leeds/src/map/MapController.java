@@ -58,36 +58,41 @@ public class MapController implements Initializable {
 			ResultSet rs = null;
 
 			// populate sex combo box
+			sexCombo.getItems().add("All");
 			rs = MapDao.getAllColumns("Select distinct sexOfCasualty from accidentinfo");
 			while (rs.next())
 				sexCombo.getItems().add(rs.getString(1));
-			sexCombo.getItems().add("All");
+			
 
 			// populate age combo box
+			ageCombo.getItems().add("All");
 			rs = MapDao.getAllColumns("Select distinct ageOfCasualty from accidentinfo");
 			while (rs.next())
 				if (rs.getInt(1) > 0)
 					ageCombo.getItems().add(rs.getString(1));
-			ageCombo.getItems().add("All");
+			
 
 			// populate year combo box
+			yearCombo.getItems().add("All");
 			rs = MapDao.getAllColumns("Select distinct year from accidentinfo");
 			while (rs.next())
 				yearCombo.getItems().add(rs.getString(1));
-			yearCombo.getItems().add("All");
+			
 
 			// populate speed combo box
+			speedCombo.getItems().add("All");
 			rs = MapDao.getAllColumns("Select distinct speed from accidentinfo");
 			while (rs.next())
 				if (rs.getInt(1) > 0)
 					speedCombo.getItems().add(rs.getString(1));
-			speedCombo.getItems().add("All");
+			
 
 			// populate weather combo box
+			weatherCombo.getItems().add("All");
 			rs = MapDao.getAllColumns("Select distinct weatherConditions from accidentinfo");
 			while (rs.next())
 				weatherCombo.getItems().add(rs.getString(1));
-			weatherCombo.getItems().add("All");
+			
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -84,7 +84,9 @@ public class DashboardController  implements Initializable {
 			e.printStackTrace();
 		}
 		
-		chart4.getData().addAll(driver, passenger, padestrian);
+		chart4.getData().add(driver);
+		chart4.getData().add(passenger);
+		chart4.getData().add(padestrian);
 		chart4.setAnimated(false);
     }
 		
@@ -117,7 +119,7 @@ public class DashboardController  implements Initializable {
 			e.printStackTrace();
 		}
 		
-		chart3.getData().addAll(totalCasualties);
+		chart3.getData().add(totalCasualties);
 		chart3.setAnimated(false);
 		
 		
@@ -159,7 +161,8 @@ public class DashboardController  implements Initializable {
 			e.printStackTrace();
 		}
 		
-		chart1.getData().addAll(maleCasualties, femaleCasualties);
+		chart1.getData().add(maleCasualties);
+		chart1.getData().add(femaleCasualties);
 		chart1.setAnimated(false);
 		
 		
@@ -207,7 +210,9 @@ public class DashboardController  implements Initializable {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-		chart2.getData().addAll(slightCasualties, seriousCasualties, fatalCasualties);
+		chart2.getData().add(slightCasualties);
+		chart2.getData().add(seriousCasualties);
+		chart2.getData().add(fatalCasualties);
 		chart2.setAnimated(false);
 		
 		
