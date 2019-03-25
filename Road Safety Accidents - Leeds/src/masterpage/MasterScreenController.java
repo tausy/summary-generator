@@ -1,9 +1,16 @@
 package masterpage;
 
 import dao.MapDao;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBuilder;
+import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -11,13 +18,34 @@ import landingpage.LoadApp;
 import login.LoginManager;
 import map.Browser;
 
-public class MasterScreenController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class MasterScreenController  {
 	@FXML
 	private Button openMap;
+
+
 
 	@FXML
 	public void openMapScreen() {
 		loadMap();
+	}
+
+	@FXML
+	public void loadPredictScreen()
+	{
+		try {
+
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/predict/predict.fxml"));
+			AnchorPane anchorPane = (AnchorPane) loader.load();
+			BorderPane borderPane = (BorderPane) LoadApp.scene.lookup("#borderPane");
+
+			borderPane.setCenter(anchorPane);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@FXML

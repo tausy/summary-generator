@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="masterpage.MasterScreenController">
    <children>
-      <Button id="openMap" layoutY="1.0" mnemonicParsing="false" onAction="#openMapScreen" prefHeight="48.0" prefWidth="225.0" style="-fx-border-color:#00838f; -fx-border-width: 1; -fx-border-style: solid; -fx-background-radius: 0; -fx-background-color: #4fb3bf;" text="MAP">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font></Button>
-      <Button id="compareButton" layoutX="225.0" layoutY="1.0" mnemonicParsing="false" onAction="#loadCompare" prefHeight="48.0" prefWidth="242.0" style="-fx-border-color:#00838f; -fx-border-width: 1; -fx-border-style: solid; -fx-background-radius: 0; -fx-background-color: #4fb3bf;" text="COMPARE">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font></Button>
-      <BorderPane id="borderPane" layoutX="2.0" layoutY="58.0" prefHeight="572.0" prefWidth="800.0" />
-      <Button layoutX="467.0" layoutY="1.0" mnemonicParsing="false" onAction="#loadDashboard" prefHeight="48.0" prefWidth="251.0" style="-fx-background-color: #4fb3bf; -fx-background-radius: 0; -fx-border-color:#00838f; -fx-border-width: 1; -fx-border-style: solid;" text="DASHBOARD">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font></Button>
+      <BorderPane id="borderPane" layoutX="4.0" layoutY="57.0" prefHeight="572.0" prefWidth="800.0" />
+      <MenuBar layoutY="2.0" prefHeight="50.0" prefWidth="800.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="menu" >
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#loadDashboard" text="Dashboard" />
+                 <MenuItem mnemonicParsing="false" onAction="#openMapScreen" text="Map" />
+                 <MenuItem mnemonicParsing="false" onAction="#loadCompare" text="Compare Accidents" />
+                 <MenuItem mnemonicParsing="false" onAction="#loadPredictScreen" text="Predict Accidents" />
+                 <MenuItem mnemonicParsing="false" onAction="#loadDashboard" text="logout" />
+              </items>
+            </Menu>
+         </menus></MenuBar>
    </children>
 </AnchorPane>
