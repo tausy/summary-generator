@@ -13,27 +13,28 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LoadApp extends Application {
-    public static Scene scene;
-    public static Stage stage;
-    public static void main(String[] args) { launch(args); }
+	public static Scene scene;
+	public static Stage stage;
 
-    @Override
-    public void start(Stage stage) throws Exception {
-         scene = new Scene(new StackPane());
+	public static void main(String[] args) {
+		launch(args);
+	}
 
-        try {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("homepage.fxml")
-            );
-            scene.setRoot((Parent) loader.load());
-        } catch (IOException ex) {
-            Logger.getLogger(LoginManager.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        stage.setScene(scene);
+	@Override
+	public void start(Stage stage) throws Exception {
+		scene = new Scene(new StackPane());
 
-        stage.show();
-        LoadApp.stage=stage;
-        stage.setResizable(false);
-        stage.centerOnScreen();
-    }
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("homepage.fxml"));
+			scene.setRoot((Parent) loader.load());
+		} catch (IOException ex) {
+			Logger.getLogger(LoginManager.class.getName()).log(Level.SEVERE, null, ex);
+		}
+		stage.setScene(scene);
+
+		stage.show();
+		LoadApp.stage = stage;
+		stage.setResizable(false);
+		stage.centerOnScreen();
+	}
 }

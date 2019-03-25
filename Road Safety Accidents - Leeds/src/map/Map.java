@@ -5,6 +5,8 @@ import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -12,6 +14,7 @@ import javafx.scene.layout.VBox;
 public class Map {
 
 	public static VBox getMapScreen() {
+		
 		TextField textField = new TextField();
 
 		ObservableList<String> yearOptions = FXCollections.observableArrayList("Show all years", "2017", "2018");
@@ -78,7 +81,17 @@ public class Map {
 		root.setPadding(new Insets(5));
 		root.setSpacing(10);
 
-		root.getChildren().addAll(row1, row2, row3);
+		Menu map = new Menu("Map");
+		Menu dashboard = new Menu("Dashboard");
+		Menu compare = new Menu("Comparisons");
+		Menu predict = new Menu("Predictions");
+		Menu logout = new Menu("Logout");
+		
+		
+		MenuBar menuBar = new MenuBar();
+		menuBar.getMenus().addAll(map, dashboard, compare, predict, logout);
+		VBox menu = new VBox(menuBar);
+		root.getChildren().addAll(menu, row1, row2, row3);
 
 		return root;
 	}
