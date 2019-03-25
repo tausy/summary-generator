@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBuilder;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -21,15 +22,33 @@ import map.Browser;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MasterScreenController  {
+public class MasterScreenController implements Initializable  {
 	@FXML
 	private Button openMap;
+
+	@FXML
+	private Menu  mainMenu;
+
+	@Override // This method is called by the FXMLLoader when initialization is complete
+	public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
+		mainMenu.setGraphic(new ImageView("/masterpage/stackedlines.png"));
+	}
+
 
 
 
 	@FXML
 	public void openMapScreen() {
 		loadMap();
+	}
+	@FXML
+	public void logout() {
+		LoadApp.stage.setHeight(310.0);
+		LoadApp.stage.setWidth(460.0);
+		LoadApp.stage.setResizable(false);
+		LoadApp.stage.centerOnScreen();
+
+		new LoginManager(LoadApp.scene).logout();
 	}
 
 	@FXML

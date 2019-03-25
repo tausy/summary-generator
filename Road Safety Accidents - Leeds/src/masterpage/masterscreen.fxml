@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="masterpage.MasterScreenController">
    <children>
-      <BorderPane id="borderPane" layoutX="4.0" layoutY="57.0" prefHeight="572.0" prefWidth="800.0" />
-      <MenuBar layoutY="2.0" prefHeight="50.0" prefWidth="800.0">
+      <BorderPane id="borderPane" layoutX="4.0" layoutY="51.0" prefHeight="572.0" prefWidth="800.0" />
+      <MenuBar layoutY="2.0" prefHeight="50.0" prefWidth="76.0" style="-fx-background-color: #00838f;">
          <menus>
-            <Menu mnemonicParsing="false" text="menu" >
+            <Menu fx:id="mainMenu" mnemonicParsing="false"  >
+
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#loadDashboard" text="Dashboard" />
                  <MenuItem mnemonicParsing="false" onAction="#openMapScreen" text="Map" />
                  <MenuItem mnemonicParsing="false" onAction="#loadCompare" text="Compare Accidents" />
                  <MenuItem mnemonicParsing="false" onAction="#loadPredictScreen" text="Predict Accidents" />
-                 <MenuItem mnemonicParsing="false" onAction="#loadDashboard" text="logout" />
+                 <MenuItem mnemonicParsing="false" onAction="#logout" text="logout" />
               </items>
             </Menu>
          </menus></MenuBar>
+      <Label layoutX="117.0" layoutY="8.0" text="Welcome To Leeds Accidents Portal !!" textFill="#eeecec">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
