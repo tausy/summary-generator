@@ -33,7 +33,7 @@
 		<TextField layoutX="210.0" layoutY="142.0" />
 		<TextField layoutX="210.0" layoutY="172.0" />
 		<TextField layoutX="210.0" layoutY="202.0" />
-		<Button layoutX="300.0" layoutY="270.0" mnemonicParsing="false"
+		<Button layoutX="300.0" layoutY="270.0" onAction="#openMasterPage" mnemonicParsing="false"
 			text="Continue" style="-fx-background-color: #4fb3bf;" />
 	</children>
 </AnchorPane>

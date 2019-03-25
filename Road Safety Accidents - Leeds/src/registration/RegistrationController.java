@@ -97,7 +97,7 @@ public class RegistrationController {
     public void showMap() {
         try {
             LoadApp.stage.setHeight(700.0);
-            LoadApp.stage.setWidth(500.0);
+            LoadApp.stage.setWidth(700.0);
             LoadApp.stage.setResizable(false);
             LoadApp.stage.centerOnScreen();
 
