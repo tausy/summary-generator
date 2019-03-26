@@ -10,7 +10,7 @@ public  class ConnectionDAO {
     public static Connection getConnection() {
         Connection conn;
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/accident","root","12345678");
+            conn = DriverManager.getConnection(Constants.dbUrl,Constants.dbUser,Constants.dbPassword);
             return conn;
         }
         catch (Exception e){

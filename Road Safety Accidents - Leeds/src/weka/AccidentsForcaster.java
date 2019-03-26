@@ -3,6 +3,7 @@ package weka;
 import java.util.ArrayList;
 import java.util.List;
 
+import dao.Constants;
 import weka.classifiers.evaluation.NumericPrediction;
 import weka.classifiers.timeseries.WekaForecaster;
 import weka.core.Instances;
@@ -43,9 +44,9 @@ public class AccidentsForcaster {
 		Instances wekaData  = null;
 		try {
 			DatabaseLoader databaseLoader = new DatabaseLoader();
-			databaseLoader.setUrl("jdbc:mysql://localhost:3306");
-			databaseLoader.setUser("root");
-			databaseLoader.setPassword("12345678");
+			databaseLoader.setUrl(Constants.dbUrl);
+			databaseLoader.setUser(Constants.dbUser);
+			databaseLoader.setPassword(Constants.dbPassword);
 			
 			databaseLoader.setQuery("select month(accidentdate) as month, year(accidentdate) as year, count(*) as accidents from accident.accidentinfo group by month(accidentdate), year(accidentdate) order by year(accidentdate), month(accidentdate)");
 			
