@@ -38,8 +38,8 @@ public class MasterScreenController implements Initializable  {
 	}
 	@FXML
 	public void logout() {
-		LoadApp.stage.setHeight(310.0);
-		LoadApp.stage.setWidth(460.0);
+		LoadApp.stage.setHeight(250.0);
+		LoadApp.stage.setWidth(360.0);
 		LoadApp.stage.setResizable(false);
 		LoadApp.stage.centerOnScreen();
 
