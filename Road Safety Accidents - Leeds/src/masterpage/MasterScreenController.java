@@ -1,26 +1,21 @@
 package masterpage;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import dao.MapDao;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonBuilder;
-import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import landingpage.LoadApp;
 import login.LoginManager;
 import map.Browser;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class MasterScreenController implements Initializable  {
 	@FXML

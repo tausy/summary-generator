@@ -10,5 +10,10 @@
 	<classpathentry kind="lib" path="dependecies/gson-2.2.2.jar"/>
 	<classpathentry kind="lib" path="dependecies/mysql-connector-java-5.1.45-bin.jar"/>
 	<classpathentry kind="lib" path="dependecies/jcoord-1.0.jar"/>
+	<classpathentry kind="lib" path="dependecies/timeseriesForecasting1.0.25.jar"/>
+	<classpathentry kind="lib" path="dependecies/arpack_combined.jar"/>
+	<classpathentry kind="lib" path="dependecies/core.jar"/>
+	<classpathentry kind="lib" path="dependecies/mtj.jar"/>
+	<classpathentry kind="lib" path="ext"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
