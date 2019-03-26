@@ -6,16 +6,23 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="predict.PredictController">
-   <children>
-      <LineChart fx:id="lineChart1" layoutX="33.0" layoutY="1.0" prefHeight="421.0" prefWidth="656.0">
-        <xAxis>
-          <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis side="LEFT" tickLabelFill="WHITE" />
-        </yAxis>
-      </LineChart>
-      <TextArea fx:id="txArea" editable="false" layoutX="43.0" layoutY="425.0" prefHeight="63.0" prefWidth="642.0" style="-fx-control-inner-background:#00838f;"  />
-   </children>
+<AnchorPane prefHeight="500.0" prefWidth="700.0"
+	style="-fx-background-color: #00838f;"
+	xmlns="http://javafx.com/javafx/8.0.172-ea"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="predict.PredictController">
+	<children>
+		<LineChart fx:id="lineChart1" layoutX="33.0" layoutY="1.0"
+			prefHeight="421.0" prefWidth="656.0">
+			<xAxis>
+				<CategoryAxis side="BOTTOM" tickLabelFill="WHITE" />
+			</xAxis>
+			<yAxis>
+				<NumberAxis side="LEFT" tickLabelFill="WHITE" />
+			</yAxis>
+		</LineChart>
+		<TextArea fx:id="predicttxArea"
+			layoutX="43.0" layoutY="425.0" prefHeight="63.0" prefWidth="642.0"
+			style="-fx-control-inner-background:#00838f;" />
+	</children>
 </AnchorPane>
