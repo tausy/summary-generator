@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.ScatterChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
 
 public class CompareController implements Initializable {
 
@@ -27,9 +28,13 @@ public class CompareController implements Initializable {
 	@FXML
 	private ComboBox<String> yearBox2;
 
+	@FXML
+	private TextArea compareTxArea;
+
 	@Override // This method is called by the FXMLLoader when initialization is complete
 	public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
 		populateComboBoxes();
+		compareTxArea.setText("todo set text");
 	}
 
 	private void populateComboBoxes() {
