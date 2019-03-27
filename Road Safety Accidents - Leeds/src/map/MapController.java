@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import login.LoginManager;
 
 public class MapController implements Initializable {
@@ -45,6 +46,8 @@ public class MapController implements Initializable {
 	private ComboBox<String> sexCombo;
 	@FXML
 	private ComboBox<String> weatherCombo;
+	@FXML
+	private TextField searchMapText;
 
 	@Override // This method is called by the FXMLLoader when initialization is complete
 	public void initialize(URL fxmlFileLocation, ResourceBundle resources) {

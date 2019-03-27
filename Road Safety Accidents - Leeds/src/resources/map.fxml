@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="700" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="map.MapController">
     <children>
-        <TextField layoutX="14.0" layoutY="14.0" />
+        <TextField fx:id="searchMapText" layoutX="14.0" layoutY="14.0" />
         <Button fx:id="search" layoutX="570.0" layoutY="82.0" mnemonicParsing="false" onAction="#search" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #4fb3bf;" text="search" textFill="#f5f3f3" />
         <VBox fx:id="mapBox" layoutX="11.0" layoutY="121.0" prefHeight="600.0" prefWidth="678.0" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="121.0" />
         <CheckBox fx:id="pedCheckBox" layoutX="307.0" layoutY="52.0" mnemonicParsing="false" text="Pedestrian" textFill="#f8f4f4" />
