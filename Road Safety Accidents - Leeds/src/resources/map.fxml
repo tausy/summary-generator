@@ -7,24 +7,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="800.0" prefWidth="800" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="map.MapController">
+<AnchorPane prefHeight="800.0" prefWidth="700" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="map.MapController">
     <children>
         <TextField layoutX="14.0" layoutY="14.0" />
-        <Button fx:id="search" layoutX="542.0" layoutY="82.0" mnemonicParsing="false" onAction="#search" style="-fx-background-color: #4fb3bf;" text="search" />
-        <VBox fx:id="mapBox" layoutX="14.0" layoutY="121.0" prefHeight="600.0" prefWidth="675.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="121.0" />
-        <CheckBox fx:id="pedCheckBox" layoutX="307.0" layoutY="52.0" mnemonicParsing="false" text="Pedestrian" />
+        <Button fx:id="search" layoutX="570.0" layoutY="82.0" mnemonicParsing="false" onAction="#search" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #4fb3bf;" text="search" textFill="#f5f3f3" />
+        <VBox fx:id="mapBox" layoutX="11.0" layoutY="121.0" prefHeight="600.0" prefWidth="678.0" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="121.0" />
+        <CheckBox fx:id="pedCheckBox" layoutX="307.0" layoutY="52.0" mnemonicParsing="false" text="Pedestrian" textFill="#f8f4f4" />
         <ComboBox fx:id="yearCombo" layoutX="195.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" promptText="Show All years" style="-fx-background-color: #4fb3bf;" />
-        <ComboBox fx:id="speedCombo" layoutX="14.0" layoutY="48.0" prefHeight="26.0" prefWidth="130.0" promptText="Speed Limit" style="-fx-background-color: #4fb3bf;" />
+        <ComboBox fx:id="speedCombo"  layoutX="14.0" layoutY="48.0" prefHeight="26.0" prefWidth="130.0" promptText="Speed Limit" style="-fx-background-color: #4fb3bf;" />
         <ComboBox fx:id="ageCombo" layoutX="346.0" layoutY="14.0" prefWidth="150.0" promptText="Age Of Causality" style="-fx-background-color: #4fb3bf;" />
         <ComboBox fx:id="sexCombo" layoutX="498.0" layoutY="14.0" prefWidth="150.0" promptText="Sex Of Causality" style="-fx-background-color: #4fb3bf;" />
         <ComboBox fx:id="weatherCombo" layoutX="150.0" layoutY="48.0" prefWidth="150.0" promptText="Weather Conditions" style="-fx-background-color: #4fb3bf;" />
-        <CheckBox fx:id="cycleChkBox" layoutX="401.0" layoutY="52.0" mnemonicParsing="false" text="Bicycle" />
-        <CheckBox fx:id="motorcycleChkBox" layoutX="472.0" layoutY="52.0" mnemonicParsing="false" style="-fx-region-background: blue;" text="Motorcycle" />
-        <CheckBox fx:id="carChkBox" layoutX="573.0" layoutY="52.0" mnemonicParsing="false" text="Car" />
-        <CheckBox fx:id="vanChkBox" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" text="Van" />
-        <CheckBox fx:id="busChkBox" layoutX="64.0" layoutY="86.0" mnemonicParsing="false" text="Bus Coach " />
-        <CheckBox fx:id="lorryChkBox" layoutX="161.0" layoutY="86.0" mnemonicParsing="false" text="Lorry" />
-        <CheckBox fx:id="otherChkBox" layoutX="226.0" layoutY="86.0" mnemonicParsing="false" text="Other" />
-        <CheckBox fx:id="claimChkBox" layoutX="287.0" layoutY="86.0" mnemonicParsing="false" text="Claims made with Accident claims" />
+        <CheckBox fx:id="cycleChkBox" layoutX="404.0" layoutY="52.0" mnemonicParsing="false" text="Bicycle" textFill="#f8f4f4" />
+        <CheckBox fx:id="motorcycleChkBox" layoutX="484.0" layoutY="52.0" mnemonicParsing="false" text="Motorcycle" textFill="#f8f4f4" />
+        <CheckBox fx:id="carChkBox" layoutX="596.0" layoutY="52.0" mnemonicParsing="false" text="Car" textFill="#f8f4f4" />
+        <CheckBox fx:id="vanChkBox" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" text="Van" textFill="#f8f4f4" />
+        <CheckBox fx:id="busChkBox" layoutX="67.0" layoutY="86.0" mnemonicParsing="false" text="Bus Coach " textFill="#f8f4f4" />
+        <CheckBox fx:id="lorryChkBox" layoutX="165.0" layoutY="86.0" mnemonicParsing="false" text="Lorry" textFill="#f8f4f4" />
+        <CheckBox fx:id="otherChkBox" layoutX="237.0" layoutY="86.0" mnemonicParsing="false" text="Other" textFill="#f8f4f4" />
+        <CheckBox fx:id="claimChkBox" layoutX="313.0" layoutY="86.0" mnemonicParsing="false" text="Claims made with Accident claims" textFill="#f8f4f4" />
     </children>
 </AnchorPane>
