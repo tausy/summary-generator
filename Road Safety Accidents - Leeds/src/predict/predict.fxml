@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<<<<<<< HEAD
 <AnchorPane prefHeight="500.0" prefWidth="700.0"
 	style="-fx-background-color: #00838f;"
 	xmlns="http://javafx.com/javafx/8.0.172-ea"
@@ -25,4 +26,18 @@
 			layoutX="43.0" layoutY="425.0" prefHeight="63.0" prefWidth="642.0"
 			style="-fx-control-inner-background:#00838f;" />
 	</children>
+=======
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="predict.PredictController">
+   <children>
+      <LineChart fx:id="lineChart1" layoutX="20.0" layoutY="39.0" prefHeight="464.0" prefWidth="656.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+        </yAxis>
+      </LineChart>
+      <TextArea fx:id="txArea" editable="false" layoutX="30.0" layoutY="538.0" prefHeight="108.0" prefWidth="642.0" style="-fx-control-inner-background:#00838f;" />
+   </children>
+>>>>>>> branch 'master' of https://tausy@github.com/tausy/accident-leeds.git
 </AnchorPane>
