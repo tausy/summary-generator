@@ -27,7 +27,7 @@
 		</ScatterChart>
 		<Label layoutX="22.0" layoutY="27.0" text="From" textFill="WHITE" />
 		<Label layoutX="20.0" layoutY="66.0" text="To" textFill="WHITE" />
-		<TextArea fx:id="compareTxArea" layoutX="40.0" layoutY="530.0" prefHeight="86.0" prefWidth="629.0" style="-fx-control-inner-background:#00838f;" />
+		<TextArea fx:id="compareTxArea" editable="false" layoutX="40.0" layoutY="530.0" prefHeight="86.0" prefWidth="629.0" style="-fx-control-inner-background:#00838f;" />
 
 	</children>
 </AnchorPane>
