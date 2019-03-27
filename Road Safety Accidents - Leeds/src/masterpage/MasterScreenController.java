@@ -17,6 +17,9 @@ import landingpage.LoadApp;
 import login.LoginManager;
 import map.Browser;
 
+/**
+ * This is the main master page in which all the screens are rendered
+ */
 public class MasterScreenController implements Initializable  {
 	@FXML
 	private Button openMap;
@@ -46,6 +49,10 @@ public class MasterScreenController implements Initializable  {
 		new LoginManager(LoadApp.scene).logout();
 	}
 
+	/**
+	 * Load predict page
+	 */
+
 	@FXML
 	public void loadPredictScreen()
 	{
@@ -62,6 +69,10 @@ public class MasterScreenController implements Initializable  {
 		}
 	}
 
+	/**
+	 * Loads compare page
+	 */
+
 	@FXML
 	public void loadCompare() {
 		try {
@@ -77,7 +88,9 @@ public class MasterScreenController implements Initializable  {
 		}
 
 	}
-
+/**
+ * Load Dashboard 
+ */
 	@FXML
 	public void loadDashboard() {
 		try {
