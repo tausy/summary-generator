@@ -8,24 +8,24 @@
 
 <?import validation.RequiredField?>
 <?import validation.ErrorLabel?>
-<AnchorPane prefHeight="293.0" prefWidth="509.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guestpage.GuestController">
+<AnchorPane prefHeight="256.0" prefWidth="499.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guestpage.GuestController">
 	<children>
-		<Label layoutX="10.0" layoutY="25.0" text="Road Traffic Analysis - Leeds" textFill="WHITE">
+		<Label layoutX="85.0" layoutY="18.0" text="Road Traffic Analysis - Leeds" textFill="WHITE">
 			<font>
 				<Font name="Arial Bold" size="22.0" />
 			</font>
 		</Label>
-		<Label layoutX="7.0" layoutY="74.0" text="Username*" textFill="WHITE" />
-		<Label layoutX="7.0" layoutY="104.0" text="First Name*" textFill="WHITE" />
-		<Label layoutX="7.0" layoutY="134.0" text="Guest Number" textFill="WHITE" />
-		<Label layoutX="7.0" layoutY="164.0" text="Age*" textFill="WHITE" />
-		<Label layoutX="7.0" layoutY="194.0" text="Gender*" textFill="WHITE" />
-		<TextField fx:id="userName" layoutX="107.0" layoutY="71.0" />
-		<TextField fx:id="firstName" layoutX="107.0" layoutY="101.0" />
-		<TextField fx:id="guestNumber" layoutX="107.0" layoutY="131.0" />
-		<TextField fx:id="age" layoutX="107.0" layoutY="161.0" />
-		<TextField fx:id="gender" layoutX="107.0" layoutY="191.0" />
-		<Button layoutX="204.0" layoutY="239.0" mnemonicParsing="false" onAction="#openMasterPage" style="-fx-background-color: #4fb3bf;" text="Continue" />
+		<Label layoutX="105.0" layoutY="67.0" text="Username*" textFill="WHITE" />
+		<Label layoutX="98.0" layoutY="97.0" text="First Name*" textFill="WHITE" />
+		<Label layoutX="83.0" layoutY="127.0" text="Guest Number" textFill="WHITE" />
+		<Label layoutX="144.0" layoutY="160.0" text="Age*" textFill="WHITE" />
+		<Label layoutX="125.0" layoutY="187.0" text="Gender*" textFill="WHITE" />
+		<TextField fx:id="userName" layoutX="182.0" layoutY="64.0" />
+		<TextField fx:id="firstName" layoutX="182.0" layoutY="94.0" />
+		<TextField fx:id="guestNumber" layoutX="182.0" layoutY="124.0" />
+		<TextField fx:id="age" layoutX="182.0" layoutY="154.0" />
+		<TextField fx:id="gender" layoutX="182.0" layoutY="184.0" />
+		<Button layoutX="281.0" layoutY="223.0" mnemonicParsing="false" onAction="#openMasterPage" style="-fx-background-color: #4fb3bf;" text="Continue" textFill="WHITE" />
 	</children>
 	<fx:define>
 		<RequiredField fx:id="rqdUsername">
@@ -50,25 +50,25 @@
 		</RequiredField>
 	</fx:define>
 	<ErrorLabel message="Username Required!!"
-				layoutX="300.0" layoutY="76.0">
+				layoutX="360.0" layoutY="73.0">
 		<validator>
 			<fx:reference source="rqdUsername"></fx:reference>
 		</validator>
 	</ErrorLabel>
 	<ErrorLabel message="Firstname required!!"
-				layoutX="300.0" layoutY="110.0">
+				layoutX="360.0" layoutY="107.0">
 		<validator>
 			<fx:reference source="rqdFirstName"></fx:reference>
 		</validator>
 	</ErrorLabel>
 	<ErrorLabel message="Age required!!"
-				layoutX="300.0" layoutY="160.0">
+				layoutX="360.0" layoutY="157.0">
 		<validator>
 			<fx:reference source="rqdAge"></fx:reference>
 		</validator>
 	</ErrorLabel>
 	<ErrorLabel message="Gender required!!"
-				layoutX="300.0" layoutY="200.0">
+				layoutX="360.0" layoutY="193.0">
 		<validator>
 			<fx:reference source="rqdGender"></fx:reference>
 		</validator>
