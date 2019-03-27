@@ -1,6 +1,5 @@
 package predict;
 
-import java.awt.*;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,12 +18,10 @@ import weka.AccidentsForcaster;
 public class PredictController   implements Initializable {
 
     @FXML private LineChart<String, Number> lineChart1;
-    @FXML private TextArea txArea;
 
     @Override // This method is called by the FXMLLoader when initialization is complete
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
         populateCharts();
-        txArea.setText("");
     }
 
     private void populateCharts()
