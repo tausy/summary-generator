@@ -89,7 +89,7 @@ public class MasterScreenController implements Initializable  {
 
 	}
 /**
- * Load Dashboard 
+ * Load Dashboard
  */
 	@FXML
 	public void loadDashboard() {
@@ -105,6 +105,9 @@ public class MasterScreenController implements Initializable  {
 		}
 	}
 
+	/***
+	 * This is where the map is loaded inside the and browser is initialized for the first time
+	 */
 	public void loadMap() {
 		try {
 			LoginManager.browser = new Browser(MapDao.getAllLocations());

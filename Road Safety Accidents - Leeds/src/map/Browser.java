@@ -16,7 +16,10 @@ public class Browser extends Region {
     private WebView browser = new WebView();
     WebEngine webEngine = browser.getEngine();
 
-
+    /***
+     *
+     * This function is where the javascript is called and map is loaded inside the webengine
+     */
   public  Browser(String locations) {
 
 
