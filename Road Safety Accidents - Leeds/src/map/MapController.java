@@ -96,7 +96,10 @@ public class MapController implements Initializable {
 			while (rs.next())
 				weatherCombo.getItems().add(rs.getString(1));
 			
-
+			// search field
+			searchMapText.setPromptText("Northing, Easting");
+			searchMapText.setFocusTraversable(false);
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -129,7 +132,7 @@ public class MapController implements Initializable {
 
 		if (pedestrian.equals("") && cycle.equals("") && motorcycle.equals("") && car.equals("") && van.equals("")
 				&& bus.equals("") && lorry.equals("") && other.equals("") && claim.equals("") && speed == null
-				&& year == null && age == null && sex == null && weather == null) {
+				&& year == null && age == null && sex == null && weather == null && searchMapText == null) {
 			baseQuery = "Select * from accidentinfo";
 		}
 
@@ -247,6 +250,17 @@ public class MapController implements Initializable {
 			}
 		}
 
+		
+		
+		if(searchMapText != null && !searchMapText.getText().equals("")) {
+			String[] location = searchMapText.getText().split(",");
+			String northing = location[0].trim();
+			String easting = location[1].trim();
+			baseQuery = baseQuery.substring(baseQuery.lastIndexOf(' ') + 1).equals("where") ?
+			baseQuery + " cast(easting as unsigned) = Cast("+easting+" as unsigned) and cast(northing as unsigned) = cast("+northing+" as unsigned)" :
+				baseQuery + " AND cast(easting as unsigned) = Cast("+easting+" as unsigned) and cast(northing as unsigned) = cast("+northing+" as unsigned)";	
+		}
+		
 		ResultSet resultSet = MapDao.getAllColumns(baseQuery);
 
 		if (resultSet != null) {

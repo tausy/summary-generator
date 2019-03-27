@@ -16,6 +16,6 @@
           <NumberAxis side="LEFT" tickLabelFill="WHITE" />
         </yAxis>
       </LineChart>
-      <TextArea fx:id="textArea" editable="false" layoutX="30.0" layoutY="517.0" prefHeight="77.0" prefWidth="642.0" style="-fx-control-inner-background:#00838f;" wrapText="true" />
+      <TextArea fx:id="textArea" editable="false" layoutX="30.0" layoutY="517.0" prefHeight="86.0" prefWidth="642.0" style="-fx-control-inner-background:#00838f;" wrapText="true" />
    </children>
 </AnchorPane>

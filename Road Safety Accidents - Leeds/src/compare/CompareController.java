@@ -8,6 +8,8 @@ import java.util.ResourceBundle;
 import dao.MapDao;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.ScatterChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.ComboBox;
@@ -85,14 +87,16 @@ public class CompareController implements Initializable {
 
 		// TODO query db
 		XYChart.Series<String, Number> carAccidents, busAccidents, taxiAccidents, cycleAccidents = null;
+		final CategoryAxis xAxis = new CategoryAxis();
+        final NumberAxis yAxis = new NumberAxis();
 		scatterChart.getData().clear();
 
 		// Get values from UI widgets
-		String fromYear = yearBox1.getValue();
-		String toYear = yearBox2.getValue();
-		String fromMonth = monthBox1.getValue();
-		String toMonth = monthBox2.getValue();
-		String weather = (weatherBox.getValue().equals("All") || weatherBox.getValue() == null) ? "%"
+		String fromYear = yearBox1 == null ? "2010" : yearBox1.getValue();
+		String toYear = yearBox2 == null ? "2010" : yearBox2.getValue();
+		String fromMonth = monthBox1 == null ? "01" : monthBox1.getValue();
+		String toMonth = monthBox2 == null ? "12" : monthBox2.getValue();
+		String weather = (weatherBox.getValue().equals("All") || weatherBox == null) ? "%"
 				: weatherBox.getValue();
 
 		// Series of data to compare
@@ -112,6 +116,9 @@ public class CompareController implements Initializable {
 					+ "' and lower(typeOfVehicle) like '%car%' group by month(accidentdate), year(accidentdate)");
 
 			carAccidents.setName("Car Accidents");
+			xAxis.setLabel("Month-Year");
+	        yAxis.setLabel("#Casualties");
+	        
 			while (rs.next()) {
 				carAccidents.getData().add(new XYChart.Data<String, Number>(rs.getString(1) + "-" + rs.getString(2),
 						Integer.parseInt(rs.getString(3))));

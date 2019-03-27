@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compare.CompareController">
 	<children>
-		<Button layoutX="535.0" layoutY="44.0" mnemonicParsing="false" onAction="#compareAccidents" prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #4fb3bf;" text="Compare" />
+		<Button layoutX="535.0" layoutY="44.0" mnemonicParsing="false" onAction="#compareAccidents" prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #4fb3bf;" text="Compare" textFill="WHITE" />
 		<ComboBox fx:id="yearBox1" layoutX="64.0" layoutY="22.0" prefHeight="26.0" prefWidth="127.0" promptText="year" style="-fx-background-color: #4fb3bf;" />
 		<ComboBox fx:id="monthBox1" layoutX="207.0" layoutY="22.0" prefHeight="26.0" prefWidth="117.0" promptText="month" style="-fx-background-color: #4fb3bf;" />
 		<ComboBox fx:id="yearBox2" layoutX="65.0" layoutY="63.0" prefHeight="26.0" prefWidth="127.0" promptText="year" style="-fx-background-color: #4fb3bf;" />
@@ -19,10 +19,10 @@
 		<ComboBox fx:id="weatherBox" layoutX="340.0" layoutY="44.0" prefWidth="150.0" promptText="weather" style="-fx-background-color: #4fb3bf;" />
 		<ScatterChart fx:id="scatterChart" layoutY="110.0" prefHeight="411.0" prefWidth="679.0">
 			<xAxis>
-				<CategoryAxis side="BOTTOM" tickLabelFill="#f5f3f3" />
+				<CategoryAxis side="BOTTOM" tickLabelFill="WHITE" />
 			</xAxis>
 			<yAxis>
-				<NumberAxis side="LEFT" tickLabelFill="#f5f3f3" />
+				<NumberAxis side="LEFT" tickLabelFill="WHITE" />
 			</yAxis>
 		</ScatterChart>
 		<Label layoutX="22.0" layoutY="27.0" text="From" textFill="WHITE" />

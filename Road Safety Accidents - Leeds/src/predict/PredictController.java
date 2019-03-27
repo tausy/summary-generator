@@ -43,7 +43,7 @@ public class PredictController   implements Initializable {
         lineChart1.setTitle("Predicted Casualties - Monthly");
         
         xAxis.setLabel("Month-Year");
-        yAxis.setLabel("#Casualties");
+        yAxis.setLabel("Number of Casualties");
 
         ArrayList<Integer> data = AccidentsForcaster.getMonthlyPredictions();
         
