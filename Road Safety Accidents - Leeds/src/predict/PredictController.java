@@ -13,15 +13,19 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.TextArea;
 import weka.AccidentsForcaster;
 
 public class PredictController   implements Initializable {
 
     @FXML private LineChart<String, Number> lineChart1;
 
+    @FXML private TextArea textArea;
+
     @Override // This method is called by the FXMLLoader when initialization is complete
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
         populateCharts();
+        textArea.setText(" text ");
     }
 
     private void populateCharts()
