@@ -73,7 +73,7 @@ public class LoginManager {
   }
   public void showGuest() {
     try {
-      LoadApp.stage.setHeight(260.0);
+      LoadApp.stage.setHeight(300.0);
       LoadApp.stage.setWidth(500.0);
       LoadApp.stage.setResizable(false);
       LoadApp.stage.centerOnScreen();
