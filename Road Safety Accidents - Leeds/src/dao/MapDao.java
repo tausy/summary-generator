@@ -10,8 +10,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * Class to handle map screen queries
+ * 
+ * @author
+ *
+ */
 public class MapDao {
 
+	/**
+	 * Method to get all the location coordinates using a query
+	 * 
+	 * @param query
+	 * @return
+	 */
 	public static ResultSet getAllColumns(String query) {
 		System.out.println(query);
 		try {
@@ -27,6 +39,11 @@ public class MapDao {
 		return null;
 	}
 
+	/**
+	 * Method to get all locations
+	 * 
+	 * @return
+	 */
 	public static String getAllLocations() {
 		try {
 			ArrayList<LocationVO> locationList = new ArrayList<LocationVO>();
@@ -51,6 +68,13 @@ public class MapDao {
 		return null;
 	}
 
+	/**
+	 * Method to convert northing/easting to lat/long
+	 * 
+	 * @param resultSet
+	 * @return
+	 * @throws SQLException
+	 */
 	public static LocationVO getLocationVo(ResultSet resultSet) throws SQLException {
 		String easting = resultSet.getString("easting");
 		String northing = resultSet.getString("northing");

@@ -10,44 +10,59 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import login.LoginManager;
 
+/**
+ * Class to control home page
+ * 
+ * @author
+ *
+ */
 public class HomepageController {
 
-    @FXML private Button exit;
-    @FXML private Button signIn;
-    @FXML private Button register;
+	// UI Widgets
+	@FXML
+	private Button exit;
+	@FXML
+	private Button signIn;
+	@FXML
+	private Button register;
 
-    @FXML
-    public void exit()
-    {
-    	System.exit(0);
-    }
+	/**
+	 * Method called on click of exit button
+	 */
+	@FXML
+	public void exit() {
+		System.exit(0);
+	}
 
-    @FXML
-    public void login()
-    {
-        LoadApp.stage.setHeight(250.0);
-        LoadApp.stage.setWidth(360.0);
-        LoadApp.stage.setResizable(false);
-        LoadApp.stage.centerOnScreen();
+	/**
+	 * Method called on click of login button
+	 */
+	@FXML
+	public void login() {
+		LoadApp.stage.setHeight(250.0);
+		LoadApp.stage.setWidth(360.0);
+		LoadApp.stage.setResizable(false);
+		LoadApp.stage.centerOnScreen();
 
-        LoginManager loginManager = new LoginManager(LoadApp.scene);
-        loginManager.showLoginScreen();
+		LoginManager loginManager = new LoginManager(LoadApp.scene);
+		loginManager.showLoginScreen();
 
-    }
+	}
 
-    @FXML
-    public void registerLogin() {
-        try {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/registration/registration.fxml")
-            );
-            LoadApp.stage.setHeight(505.0);
-            LoadApp.stage.setWidth(600.0);
+	/**
+	 * Method called on click of register
+	 */
+	@FXML
+	public void registerLogin() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/registration/registration.fxml"));
+			LoadApp.stage.setHeight(505.0);
+			LoadApp.stage.setWidth(600.0);
 
-            LoadApp.scene.setRoot((Parent) loader.load());
+			LoadApp.scene.setRoot((Parent) loader.load());
 
-        } catch (IOException ex) {
-            Logger.getLogger(LoginManager.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+		} catch (IOException ex) {
+			Logger.getLogger(LoginManager.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
 }
