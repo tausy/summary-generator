@@ -38,7 +38,7 @@
       <Label layoutX="123.0" layoutY="349.0" text="Postal code" textFill="WHITE"/>
       <Label layoutX="160.0" layoutY="384.0" text="Email" textFill="WHITE"/>
       <Button layoutX="311.0" layoutY="429.0" mnemonicParsing="false" onAction="#registerPage" 
-      style="-fx-background-color: #4fb3bf;" text="Register"/>
+      style="-fx-background-color: #4fb3bf;" text="Register" textFill="WHITE"/>
     </children>
 
     <fx:define>

@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import dao.Constants;
 import dao.MapDao;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -25,7 +26,7 @@ public class PredictController   implements Initializable {
     @Override // This method is called by the FXMLLoader when initialization is complete
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
         populateCharts();
-        textArea.setText(" text ");
+        textArea.setText(Constants.PREDICT_TEXT_BOX);
     }
 
     private void populateCharts()
