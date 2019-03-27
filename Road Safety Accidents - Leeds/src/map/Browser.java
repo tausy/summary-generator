@@ -20,7 +20,7 @@ public class Browser extends Region {
      *
      * This function is where the javascript is called and map is loaded inside the webengine
      * the cluster is handled by google api itself
-     * main inputs are lat and long 
+     * main inputs are lat and long
      */
   public  Browser(String locations) {
 
