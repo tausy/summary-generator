@@ -8,119 +8,161 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <?import validation.RequiredField?>
+<?import validation.CardinalityValidator?>
+<?import validation.RegexValidator?>
 <?import validation.ErrorLabel?>
-<AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registration.RegistrationController">
-    <children>
-    <Label layoutX="120.0" layoutY="25.0"
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0"
+	style="-fx-background-color: #00838f;"
+	xmlns="http://javafx.com/javafx/8.0.172-ea"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="registration.RegistrationController">
+	<children>
+		<Label layoutX="120.0" layoutY="25.0"
 			text="Road Traffic Analysis - Leeds" textFill="WHITE">
 			<font>
 				<Font name="Arial Bold" size="22.0" />
-				</font>
+			</font>
 		</Label>
-        <Label layoutX="121.0" layoutY="85.0" text="*First Name" textFill="WHITE"/>
-        <Label layoutX="125.0" layoutY="116.0" text="*Sur Name" textFill="WHITE"/>
-        <Label layoutX="142.0" layoutY="148.0" text="*Gender" textFill="WHITE"/>
-        <Label layoutX="83.0" layoutY="184.0" text="*Contact Number" textFill="WHITE"/>
-        <Label layoutX="135.0" layoutY="215.0" text="*Address" textFill="WHITE"/>
-        <TextField fx:id="firstName" layoutX="202.0" layoutY="80.0" />
-        <TextField fx:id="surName" layoutX="202.0" layoutY="111.0" />
-        <TextField fx:id="gender" layoutX="202.0" layoutY="143.0" />
-        <TextField fx:id="contact" layoutX="202.0" layoutY="179.0" />
-        <TextField fx:id="address" layoutX="202.0" layoutY="210.0" />
-      <Label layoutX="122.0" layoutY="250.0" text="*user name" textFill="WHITE"/>
-      <TextField fx:id="userName" layoutX="202.0" layoutY="245.0" />
-      <PasswordField fx:id="password" layoutX="202.0" layoutY="277.0" />
-      <PasswordField fx:id="confirmPassword" layoutX="202.0" layoutY="311.0" />
-      <TextField fx:id="postalCode" layoutX="202.0" layoutY="344.0" />
-      <TextField fx:id="email" layoutX="202.0" layoutY="379.0" />
-      <Label layoutX="126.0" layoutY="282.0" text="*Password" textFill="WHITE"/>
-      <Label layoutX="73.0" layoutY="316.0" text="*Confirm Password" textFill="WHITE"/>
-      <Label layoutX="123.0" layoutY="349.0" text="Postal code" textFill="WHITE"/>
-      <Label layoutX="160.0" layoutY="384.0" text="Email" textFill="WHITE"/>
-      <Button layoutX="311.0" layoutY="429.0" mnemonicParsing="false" onAction="#registerPage" 
-      style="-fx-background-color: #4fb3bf;" text="Register" textFill="WHITE"/>
-    </children>
+		<Label layoutX="121.0" layoutY="85.0" text="*First Name"
+			textFill="WHITE" />
+		<Label layoutX="125.0" layoutY="116.0" text="*Sur Name"
+			textFill="WHITE" />
+		<Label layoutX="142.0" layoutY="148.0" text="*Gender"
+			textFill="WHITE" />
+		<Label layoutX="83.0" layoutY="184.0" text="*Contact Number"
+			textFill="WHITE" />
+		<Label layoutX="135.0" layoutY="215.0" text="*Address"
+			textFill="WHITE" />
+		<TextField fx:id="firstName" layoutX="202.0" layoutY="80.0" />
+		<TextField fx:id="surName" layoutX="202.0" layoutY="111.0" />
+		<TextField fx:id="gender" layoutX="202.0" layoutY="143.0" />
+		<TextField fx:id="contact" layoutX="202.0" layoutY="179.0" />
+		<TextField fx:id="address" layoutX="202.0" layoutY="210.0" />
+		<Label layoutX="122.0" layoutY="250.0" text="*user name"
+			textFill="WHITE" />
+		<TextField fx:id="userName" layoutX="202.0" layoutY="245.0" />
+		<PasswordField fx:id="password" layoutX="202.0"
+			layoutY="277.0" />
+		<PasswordField fx:id="confirmPassword" layoutX="202.0"
+			layoutY="311.0" />
+		<TextField fx:id="postalCode" layoutX="202.0"
+			layoutY="344.0" />
+		<TextField fx:id="email" layoutX="202.0" layoutY="379.0" />
+		<Label layoutX="126.0" layoutY="282.0" text="*Password"
+			textFill="WHITE" />
+		<Label layoutX="73.0" layoutY="316.0" text="*Confirm Password"
+			textFill="WHITE" />
+		<Label layoutX="123.0" layoutY="349.0" text="Postal code"
+			textFill="WHITE" />
+		<Label layoutX="160.0" layoutY="384.0" text="Email"
+			textFill="WHITE" />
+		<Button layoutX="310.0" layoutY="430.0" mnemonicParsing="false"
+			onAction="#registerPage" style="-fx-background-color: #4fb3bf;"
+			text="Register" textFill="WHITE" />
+		<Label layoutX="160.0" layoutY="410.0" text=""
+			textFill="#ff0033" />
+	</children>
 
-    <fx:define>
-        <RequiredField fx:id="rqdFirstName" >
-            <srcControl>
-                <fx:reference source="firstName"></fx:reference>
-            </srcControl>
-        </RequiredField>
-        <RequiredField fx:id="rqdSurName" >
-            <srcControl>
-                <fx:reference source="surName"></fx:reference>
-            </srcControl>
-        </RequiredField>
-        <RequiredField fx:id="rqdGender" >
-            <srcControl>
-                <fx:reference source="gender"></fx:reference>
-            </srcControl>
-        </RequiredField>
-        <RequiredField fx:id="rqdContact" >
-            <srcControl>
-                <fx:reference source="contact"></fx:reference>
-            </srcControl>
-        </RequiredField>
-        <RequiredField fx:id="rqdAddress" >
-            <srcControl>
-                <fx:reference source="address"></fx:reference>
-            </srcControl>
-        </RequiredField>
-        <RequiredField fx:id="rqdUserName" >
-            <srcControl>
-                <fx:reference source="userName"></fx:reference>
-            </srcControl>
-        </RequiredField>
-        <RequiredField fx:id="rqdPassword" >
-            <srcControl>
-                <fx:reference source="password"></fx:reference>
-            </srcControl>
-        </RequiredField>
-        <RequiredField fx:id="rqdConfirmPassword" >
-            <srcControl>
-                <fx:reference source="confirmPassword"></fx:reference>
-            </srcControl>
-        </RequiredField>
-    </fx:define>
-    <ErrorLabel message="Please enter your first name" layoutX="400.0" layoutY="85.0">
-        <validator>
-            <fx:reference source="rqdFirstName"></fx:reference>
-        </validator>
-    </ErrorLabel>
-    <ErrorLabel message="Please enter your surname" layoutX="400.0" layoutY="116.0">
-        <validator>
-            <fx:reference source="rqdSurName"></fx:reference>
-        </validator>
-    </ErrorLabel>
-    <ErrorLabel message="Please enter your gender" layoutX="400.0" layoutY="145.0">
-        <validator>
-            <fx:reference source="rqdGender"></fx:reference>
-        </validator>
-    </ErrorLabel>
-    <ErrorLabel message="Please enter your contact" layoutX="400.0" layoutY="179.0">
-        <validator>
-            <fx:reference source="rqdContact"></fx:reference>
-        </validator>
-    </ErrorLabel>
-    <ErrorLabel message="Please enter your Address" layoutX="400.0" layoutY="210.0">
-        <validator>
-            <fx:reference source="rqdAddress"></fx:reference>
-        </validator>
-    </ErrorLabel>
-    <ErrorLabel message="Please enter your username" layoutX="400.0" layoutY="250.0">
-        <validator>
-            <fx:reference source="rqdUserName"></fx:reference>
-        </validator>
-    </ErrorLabel>
-    <ErrorLabel message="Please enter your password" layoutX="400.0" layoutY="277.0">
-        <validator>
-            <fx:reference source="rqdPassword"></fx:reference>
-        </validator>
-    </ErrorLabel>
-    <ErrorLabel message="Please enter password same as above" layoutX="400.0" layoutY="311.0">
-        <validator>
-            <fx:reference source="rqdConfirmPassword"></fx:reference>
-        </validator>
-    </ErrorLabel>
+	<fx:define>
+		<RegexValidator fx:id="rqdFirstName">
+			<srcControl>
+				<fx:reference source="firstName"></fx:reference>
+			</srcControl>
+		</RegexValidator>
+		<RegexValidator fx:id="rqdSurName">
+			<srcControl>
+				<fx:reference source="surName"></fx:reference>
+			</srcControl>
+		</RegexValidator>
+		<RegexValidator fx:id="rqdGender">
+			<srcControl>
+				<fx:reference source="gender"></fx:reference>
+			</srcControl>
+		</RegexValidator>
+		<RegexValidator fx:id="rqdContact">
+			<srcControl>
+				<fx:reference source="contact"></fx:reference>
+			</srcControl>
+		</RegexValidator>
+		<RequiredField fx:id="rqdAddress">
+			<srcControl>
+				<fx:reference source="address"></fx:reference>
+			</srcControl>
+		</RequiredField>
+		<RegexValidator fx:id="rqdEmail">
+			<srcControl>
+				<fx:reference source="email"></fx:reference>
+			</srcControl>
+		</RegexValidator>
+		<RequiredField fx:id="rqdUserName">
+			<srcControl>
+				<fx:reference source="userName"></fx:reference>
+			</srcControl>
+		</RequiredField>
+		<RegexValidator fx:id="rqdPassword">
+			<srcControl>
+				<fx:reference source="password"></fx:reference>
+			</srcControl>
+		</RegexValidator>
+		<RegexValidator fx:id="rqdConfirmPassword">
+			<srcControl>
+				<fx:reference source="confirmPassword"></fx:reference>
+			</srcControl>
+		</RegexValidator>
+	</fx:define>
+	<ErrorLabel message="Please enter your first name"
+		layoutX="400.0" layoutY="85.0" textFill="RED">
+		<validator>
+			<fx:reference source="rqdFirstName"></fx:reference>
+		</validator>
+	</ErrorLabel>
+	<ErrorLabel message="Please enter your surname"
+		layoutX="400.0" layoutY="116.0" textFill="RED">
+		<validator>
+			<fx:reference source="rqdSurName"></fx:reference>
+		</validator>
+	</ErrorLabel>
+	<ErrorLabel message="Please enter your gender"
+		layoutX="400.0" layoutY="145.0" textFill="RED">
+		<validator>
+			<fx:reference source="rqdGender"></fx:reference>
+		</validator>
+	</ErrorLabel>
+	<ErrorLabel message="Please enter your contact"
+		layoutX="400.0" layoutY="179.0" textFill="RED">
+		<validator>
+			<fx:reference source="rqdContact"></fx:reference>
+		</validator>
+	</ErrorLabel>
+	<ErrorLabel message="Please enter your Address"
+		layoutX="400.0" layoutY="210.0" textFill="RED">
+		<validator>
+			<fx:reference source="rqdAddress"></fx:reference>
+		</validator>
+	</ErrorLabel>
+	<ErrorLabel message="Please enter your username"
+		layoutX="400.0" layoutY="250.0" textFill="RED">
+		<validator>
+			<fx:reference source="rqdUserName"></fx:reference>
+		</validator>
+	</ErrorLabel>
+	<ErrorLabel message="Please enter your password"
+		layoutX="400.0" layoutY="277.0" textFill="RED">
+		<validator>
+			<fx:reference source="rqdPassword"></fx:reference>
+		</validator>
+	</ErrorLabel>
+	<ErrorLabel message="Please enter password same as above"
+		layoutX="400.0" layoutY="311.0" textFill="RED">
+		<validator>
+			<fx:reference source="rqdConfirmPassword"></fx:reference>
+		</validator>
+	</ErrorLabel>
+	<ErrorLabel message="Invalid email" layoutX="400.0"
+		layoutY="385.0" textFill="RED">
+		<validator>
+			<fx:reference source="rqdEmail"></fx:reference>
+		</validator>
+	</ErrorLabel>
 </AnchorPane>

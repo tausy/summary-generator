@@ -43,6 +43,8 @@ public class RegexValidator extends ValidatorBase{
             return false;
         else
         {
+        	System.out.println(regex.get());
+        	System.out.println(text);
             return Pattern.matches(regex.get(), text);
         }
     }
@@ -55,6 +57,7 @@ public class RegexValidator extends ValidatorBase{
 
     /***** regex string *****/
     protected SimpleStringProperty regex = new SimpleStringProperty();
+    
 
     public void setRegex(String regex)
     {

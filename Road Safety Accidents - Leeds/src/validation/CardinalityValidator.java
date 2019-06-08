@@ -71,7 +71,7 @@ public class CardinalityValidator extends ValidatorBase{
      **************************************************************************/
 
     /***** min *****/
-    protected SimpleIntegerProperty min = new SimpleIntegerProperty(-1);
+    protected SimpleIntegerProperty min = new SimpleIntegerProperty(4);
 
     public void setMin(int min)
     {
@@ -89,7 +89,7 @@ public class CardinalityValidator extends ValidatorBase{
     }
 
     /***** max *****/
-    protected SimpleIntegerProperty max = new SimpleIntegerProperty(-1);
+    protected SimpleIntegerProperty max = new SimpleIntegerProperty(20);
 
     public void setMax(int max)
     {
@@ -98,12 +98,12 @@ public class CardinalityValidator extends ValidatorBase{
 
     public int getMax()
     {
-        return this.min.get();
+        return this.max.get();
     }
 
     public IntegerProperty maxProperty()
     {
-        return this.min;
+        return this.max;
     }
 
 }

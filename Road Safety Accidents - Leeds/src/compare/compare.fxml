@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compare.CompareController">
+<AnchorPane prefHeight="900.0" prefWidth="800.0" style="-fx-background-color: #00838f;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="compare.CompareController">
 	<children>
 		<Button layoutX="535.0" layoutY="44.0" mnemonicParsing="false" onAction="#compareAccidents" prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #4fb3bf;" text="Compare" textFill="WHITE" />
 		<ComboBox fx:id="yearBox1" layoutX="64.0" layoutY="22.0" prefHeight="26.0" prefWidth="127.0" promptText="year" style="-fx-background-color: #4fb3bf;" />

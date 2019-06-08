@@ -47,17 +47,19 @@ public class PredictController   implements Initializable {
         yAxis.setLabel("Number of Casualties");
 
         ArrayList<Integer> data = AccidentsForcaster.getMonthlyPredictions();
+        System.out.print(data);
         
 		accidents = new XYChart.Series<String, Number>();
+		if(!data.isEmpty()) {
 		try {
 			//
-			rs = MapDao.getAllColumns("select month(accidentdate), year(accidentdate) from accidentinfo order by year(accidentdate) desc, month(accidentdate) desc limit 1");
+			rs = MapDao.getAllColumns("select month(accidentdate), year(accidentdate) from accidentinfo order by year(accidentdate) desc, month(accidentdate) desc");
 			rs.next();
 			int month = rs.getInt(1);
 			int year = rs.getInt(2);
 			accidents.setName("#Casualties");
 			
-			for(int i=0; i<12; i++) {
+			for(int i=0; i< data.size(); i++) {
 				if(month > 12) { month=01; year++;}
 				accidents.getData().add(new XYChart.Data<String, Number>(month+"-"+year, data.get(i)));
 				month++;
@@ -68,6 +70,7 @@ public class PredictController   implements Initializable {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
 		}
 		
 		lineChart1.getData().add(accidents);

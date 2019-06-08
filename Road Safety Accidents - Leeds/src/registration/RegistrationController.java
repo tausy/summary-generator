@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import dao.ConnectionDAO;
+import dao.Constants;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.PasswordField;
@@ -11,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import landingpage.LoadApp;
 import masterpage.MasterScreenController;
+import validation.RegexValidator;
 import validation.RequiredField;
 
 public class RegistrationController {
@@ -36,21 +38,23 @@ public class RegistrationController {
     @FXML
     private PasswordField confirmPassword;
     @FXML
-    private RequiredField rqdFirstName;
+    private RegexValidator rqdFirstName;
     @FXML
-    private RequiredField rqdSurName;
+    private RegexValidator rqdSurName;
     @FXML
-    private RequiredField rqdGender;
+    private RegexValidator rqdGender;
     @FXML
-    private RequiredField rqdContact;
+    private RegexValidator rqdContact;
     @FXML
     private RequiredField rqdAddress;
     @FXML
     private RequiredField rqdUserName;
     @FXML
-    private RequiredField rqdPassword;
+    private RegexValidator rqdEmail;
     @FXML
-    private RequiredField rqdConfirmPassword;
+    private RegexValidator rqdPassword;
+    @FXML
+    private RegexValidator rqdConfirmPassword;
 
 
     @FXML
@@ -80,7 +84,7 @@ public class RegistrationController {
                 //preparedStmt.execute();
                 if(preparedStmt.executeUpdate()>0)
                 {
-                    showMap();
+                    //showMap();
                 }
                 conn.close();
 
@@ -114,16 +118,29 @@ public class RegistrationController {
     }
     private boolean validateAllInputs()
     {
-        boolean allGood=false;
+    	boolean allGood=false;
+    	RegexValidator regexValidator = new RegexValidator();
+    	
+    	regexValidator.setRegex(Constants.REGEX_NAME);
         rqdFirstName.eval();
         rqdSurName.eval();
+        
+        regexValidator.setRegex(Constants.REGEX_GENDER);
         rqdGender.eval();
+        
+        regexValidator.setRegex(Constants.REGEX_PHONE);
         rqdContact.eval();
         rqdAddress.eval();
+        
         rqdUserName.eval();
+        
+        regexValidator.setRegex(Constants.REGEX_PASSWORD);
         rqdPassword.eval();
         rqdConfirmPassword.eval();
 
+        regexValidator.setRegex(Constants.REGEX_EMAIL);
+        rqdEmail.eval();
+        
         if(!confirmPassword.getText().equals(password.getText()))
         {
             System.out.println("not equal");
@@ -133,7 +150,7 @@ public class RegistrationController {
         }
         if (!(rqdFirstName.hasErrorsProperty().get() || rqdSurName.hasErrorsProperty().get() || rqdGender.hasErrorsProperty().get()
         || rqdContact.hasErrorsProperty().get() || rqdAddress.hasErrorsProperty().get() || rqdUserName.hasErrorsProperty().get()
-        || rqdPassword.hasErrorsProperty().get() || rqdConfirmPassword.hasErrorsProperty().get()))
+        || rqdPassword.hasErrorsProperty().get() || rqdConfirmPassword.hasErrorsProperty().get() || rqdEmail.hasErrorsProperty().get()))
         {
             System.out.println("error not present");
             allGood=true;
