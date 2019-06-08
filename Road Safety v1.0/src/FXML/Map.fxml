@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<VBox prefHeight="800.0" prefWidth="800.0"
+	xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controllers.MapController">
+	<children>
+		<AnchorPane maxHeight="-1.0" maxWidth="-1.0"
+			minHeight="800.0" minWidth="800.0" prefHeight="800.0"
+			prefWidth="800.0" style="-fx-background-color: #2D3447;"
+			VBox.vgrow="ALWAYS">
+			<children>
+				<Label layoutX="273.0" layoutY="37.0" prefHeight="29.0"
+					prefWidth="181.0" text="Road Accidents" textFill="#2196f3">
+					<font>
+						<Font size="24.0" />
+					</font>
+				</Label>
+				<Label layoutX="454.0" layoutY="37.0" prefHeight="17.0"
+					prefWidth="74.0" text="Leeds" textFill="#a0a2ab">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Label>
+				<MenuBar fx:id="menuBar" layoutX="2.0" layoutY="2.0"
+					prefHeight="50.0" prefWidth="75.0"
+					style="-fx-background-color: #2D3447;">
+					<menus>
+						<Menu fx:id="mainMenu" mnemonicParsing="false">
+							<items>
+								<MenuItem fx:id="dashboard" mnemonicParsing="false"
+									onAction="#loadDashboard" text="Dashboard" />
+								<MenuItem mnemonicParsing="false"
+									text="Map" />
+								<MenuItem fx:id="compare" mnemonicParsing="false"
+									onAction="#loadCompare" text="Compare Accidents" />
+								<MenuItem fx:id="predict" mnemonicParsing="false"
+									text="Predict Accidents" onAction="#loadPredict" />
+								<MenuItem mnemonicParsing="false" text="Scatter Analysis" onAction="#loadScatter" />
+								<MenuItem mnemonicParsing="false" text="Questions" onAction="#loadQuestions" />
+								<MenuItem mnemonicParsing="false" text="Facts and Preventions" onAction="#loadFacts" />
+								<MenuItem mnemonicParsing="false" text="Logout" onAction="#logout" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+				<VBox fx:id="map" layoutY="265.0" prefHeight="600.0"
+					prefWidth="800.0" />
+				<Separator layoutY="265.0" prefHeight="0.0"
+					prefWidth="800.0" />
+				<Separator layoutX="275.0" layoutY="70.0" prefHeight="3.0"
+					prefWidth="246.0" />
+				<ComboBox fx:id="yearCombo" layoutX="8.0" layoutY="105.0"
+					prefWidth="150.0" promptText="Year" />
+				<ComboBox fx:id="speedCombo" layoutX="167.0"
+					layoutY="105.0" prefWidth="150.0" promptText="Speed" />
+				<ComboBox fx:id="ageCombo" layoutX="326.0" layoutY="105.0"
+					prefWidth="150.0" promptText="Age" />
+				<ComboBox fx:id="sexCombo" layoutX="486.0" layoutY="105.0"
+					prefWidth="150.0" promptText="Gender" />
+				<ComboBox fx:id="weatherCombo" layoutX="644.0"
+					layoutY="105.0" prefWidth="150.0" promptText="Weather" />
+				<CheckBox fx:id="pedCheckBox" layoutX="29.0"
+					layoutY="170.0" mnemonicParsing="false" text="Padestrian"
+					textFill="#a0a2ab" />
+				<CheckBox fx:id="cycleChkBox" layoutX="141.0"
+					layoutY="171.0" mnemonicParsing="false" text="Cycle"
+					textFill="#a0a2ab" />
+				<CheckBox fx:id="motorcycleChkBox" layoutX="225.0"
+					layoutY="172.0" mnemonicParsing="false" text="Motorcycle"
+					textFill="#a0a2ab" />
+				<CheckBox fx:id="carChkBox" layoutX="344.0" layoutY="173.0"
+					mnemonicParsing="false" text="Car" textFill="#a0a2ab" />
+				<CheckBox fx:id="vanChkBox" layoutX="427.0" layoutY="173.0"
+					mnemonicParsing="false" text="Van" textFill="#a0a2ab" />
+				<CheckBox fx:id="busChkBox" layoutX="510.0" layoutY="173.0"
+					mnemonicParsing="false" text="Bus" textFill="#a0a2ab" />
+				<CheckBox fx:id="lorryChkBox" layoutX="591.0"
+					layoutY="173.0" mnemonicParsing="false" text="Lorry"
+					textFill="#a0a2ab" />
+				<CheckBox fx:id="otherChkBox" layoutX="680.0"
+					layoutY="173.0" mnemonicParsing="false" text="Other"
+					textFill="#a0a2ab" />
+				<Button fx:id="apply" layoutX="610.0" layoutY="221.0"
+					mnemonicParsing="false" onAction="#applyFilters" prefHeight="30.0"
+					prefWidth="180.0" text="Apply Filters" />
+				<Button fx:id="reset" layoutX="420.0" layoutY="221.0"
+					mnemonicParsing="false" onAction="#resetFilters" prefHeight="30.0"
+					prefWidth="180.0" text="Reset Filters" />
+				<TextField fx:id="searchMapText"
+					layoutX="10.0" layoutY="221.0" prefHeight="32.0" prefWidth="210.0"
+					promptText="Search" />
+			</children>
+		</AnchorPane>
+	</children>
+</VBox>
