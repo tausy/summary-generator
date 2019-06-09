@@ -1,4 +1,4 @@
-# summary-generator
+# Summary Generator
 The information age has led to information overload. A simple Google search for - apple renders more than 500 Million results ranging from all walks of life. The problem is compounded by the fact that even if a relevant page is encountered the amount of textual data present in a single page can be quite overwhelming. Further increasing the complexity, if the time is limited, reading the entire document becomes very difficult. Even skimming is difficult as there can be a problem of loss of context. And many a times we find ourselves in need of only the gist or summary of articles that we read. 
 This system does exactly this, whatever you are reading online, if it is more than you can handle, simply paste the URL/text into the application, and you will get only few sentences as the summary of the entire article. Simple and easy to use application making your reading experiences on the web a more productive one.
 
