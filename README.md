@@ -38,3 +38,25 @@ This module keeps all the user interface related components. All the user intera
 ### Database
 Database module handles all the interactions with the databases. 
 
+
+## Features
+1. Generate summary of a webpage
+2. Save summary to database
+3. Load previously generated summaries
+
+## Class Diagram
+![Class Diagram](https://raw.githubusercontent.com/tausy/summary-generator/master/SumGen/ClassDiagram.png)
+
+## Java Environment
+Jdk 8
+
+## System Screenshots
+![Class Diagram](https://raw.githubusercontent.com/tausy/summary-generator/master/SumGen/screenshots/Homepage.png)
+#
+![Class Diagram](https://raw.githubusercontent.com/tausy/summary-generator/master/SumGen/screenshots/SmmaryLines.png)
+#
+![Class Diagram](https://raw.githubusercontent.com/tausy/summary-generator/master/SumGen/screenshots/GeneratedSummaries.png)
+#
+![Class Diagram](https://raw.githubusercontent.com/tausy/summary-generator/master/SumGen/screenshots/PastSummaries.png)
+#
+
